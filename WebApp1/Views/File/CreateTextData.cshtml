@@ -1,0 +1,17 @@
+﻿
+
+<form asp-controller="File" asp-action="CreateTextData" method="post">
+    <div class="input-group-sm">
+        <label>File Name</label>
+        <input type="text" name="fileName" class="form-control" />
+    </div>
+    <div class="input-group-sm">
+        <label>Text</label>
+        <textarea name="text" rows="5" class="form-control">
+    
+</textarea>
+    </div>
+    <div class="input-group-sm">
+        <button type="submit" class="btn btn-success">Create File</button>
+    </div>
+</form>

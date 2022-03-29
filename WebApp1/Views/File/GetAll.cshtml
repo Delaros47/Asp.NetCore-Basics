@@ -1,0 +1,35 @@
+﻿@model FileInfo[]
+
+
+
+
+
+<a asp-controller="File" asp-action="Create" class="btn btn-success">Create</a> &nbsp;
+<a asp-controller="File" asp-action="CreateTextData" class="btn btn-success">Create Text Data</a> &nbsp;
+<a asp-controller="File" asp-action="FileUpload" class="btn btn-primary">Upload File</a>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Extension</th>
+        <th>Name</th>
+        <th>Creation Time</th>
+        <th>Length</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach(var item in Model)
+    {
+
+        <tr>
+        <td>@item.Extension</td>
+            <td>@item.Name</td>
+            <td>@item.CreationTime</td>
+            <td>@item.Length</td>
+            <td>
+                <a asp-controller="File" asp-action="Remove" asp-route-fileName="@item.Name" class="btn btn-danger">Remove</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+

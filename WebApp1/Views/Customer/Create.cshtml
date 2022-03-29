@@ -1,0 +1,20 @@
+﻿@model Customer
+
+<h1 class="alert-info" >Create a Customer</h1>
+<form asp-controller="Customer" asp-action="Create" method="post">
+    <div class="input-group-sm">
+        <label>First Name</label>
+        <input type="text" asp-for="FirstName" class="form-control"/>
+    </div>
+    <div class="input-group-sm">
+        <label>Last Name</label>
+        <input type="text" asp-for="LastName" class="form-control"/>
+    </div>
+    <div class="input-group-sm">
+        <label>Age</label>
+        <input type="text" asp-for="Age" class="form-control"/>
+    </div> <br/>
+    <div class="input-group-sm">
+        <button type="submit" class="btn btn-success">Create</button>
+    </div>
+</form>
